@@ -1,0 +1,290 @@
+.slide
+{
+	min-height: 40px;
+	width: 100%;
+	text-align: center;
+	margin: -10px 0 10px 0;
+	border-radius: 0 0 25px 25px;
+	box-shadow: 0 0 20px black inset;
+}
+.slide input, .slide button, .slide select
+{
+	padding: 5px 10px;
+}
+.slide a
+{
+	padding: 8px 10px 2px 10px;
+}
+.slide img, .slide form
+{
+	margin: 0;
+	height: 40px;
+	display: inline-block;
+}
+.slide input, .slide select, .slide a, .slide button
+{
+	box-sizing: border-box;
+	height: 40px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	color: white;
+	border: 0;
+	background: black;
+	opacity: 0.7;
+	border-radius: 0;
+	transition: all .3s linear 0s;
+	box-shadow: 0 0 0 black inset, -3px 0 0 black;
+	vertical-align: top;
+}
+.slide input:hover, .slide select:hover, .slide a:hover, .slide button:hover, .slide .slideBTactive, .slide .slideBTveille:hover
+{
+	color: black;
+	opacity: 1;
+	background: white;
+	box-shadow: 0 -3px 1px black inset;
+}
+.slide .slideBTveille
+{
+	color: black;
+	opacity: 6;
+	background: silver;
+	transition: all .3s linear 0s;
+	box-shadow: 0 -3px 1px black inset;
+}
+.slide input[name]
+{
+	cursor: text;
+}
+.slide form input[type="image"]
+{
+	cursor: pointer;
+}
+.bt2cube
+{
+	display: inline-block;
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	border: 1px solid black;
+	box-shadow: 0 0 5px black inset, 0 0 0 white;
+	transition: all .4s linear 0s;
+}
+.bt2cube span
+{
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border: 1px solid black;
+	margin: 6px 0 0 -4px;
+}
+.bt2cube:hover
+{
+	opacity: 0.9;
+	box-shadow: 0 0 0 white inset, 0 0 5px black;
+}
+.bt2cube:hover, .bt2cube span:hover
+{
+	border-color: white;
+	background: white;
+}
+.rmBT, .createBT
+{
+	padding: 3px 5px;
+	width: 46px;
+	height: 50px;
+	border-radius: 30px;
+	transition: all .5s linear 0s;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.rmBT
+{
+	animation: rmBt 3s ease 0s 1;
+	background: #fc0000;
+	box-shadow: 0 0 18px white inset, 0 0 5px red;
+}
+.rmBT:hover
+{
+	cursor: pointer;
+	background: rgba(255, 0, 0, 0.9);
+	box-shadow: 0 0 18px white inset, 0 0 5px white;
+}
+.rmBT div
+{
+	margin-left: 20px;
+	width: 7px;
+	height: 50px;
+	border: 0;
+	background: black;
+	box-shadow: 0 0 20px black, 0 0 2px white inset;
+	transition: all .5s linear 0s;
+	border-radius: 10px;
+	transform-origine: 50% 50%;
+}
+.rmBT:hover div
+{
+	background: red;
+	box-shadow: 0 0 40px black, 0 0 5px white inset;
+}
+.rmBT:active
+{
+	transition: all 0.2s linear 0;
+	transform: rotate(360deg);
+}
+.rmBT .crossL
+{
+	position: absolute;
+	animation: rmCrossL 3s linear 0s 1;
+	transform:rotate(-40deg);
+}
+.rmBT .crossR
+{
+	animation: rmCrossR 3s linear 0s 1;
+	transform:rotate(40deg);
+}
+@keyframes rmBt
+{
+	0%
+	{
+		background: black;
+		box-shadow: 0 0 0px white inset, 0 0 0px red;
+	}
+	50%
+	{
+		box-shadow: 0 0 9px white inset, 0 0 3px red;
+	}
+	100%
+	{
+		background: #fc0000;
+		box-shadow: 0 0 18px white inset, 0 0 5px red;
+	}
+}
+@keyframes rmCrossL
+{
+	0%
+	{
+		transform:rotate(0deg);
+		opacity: .2;
+		background: green;
+	}
+	50%
+	{
+		background: red;
+	}
+	100%
+	{
+		transform:rotate(-40deg);
+		opacity: 1;
+		background: black;
+	}
+}
+@keyframes rmCrossR
+{
+	0%
+	{
+		transform:rotate(0deg);
+		opacity: .2;
+		background: green;
+	}
+	50%
+	{
+		background: red;
+	}
+	100%
+	{
+		transform:rotate(50deg);
+		opacity: 1;
+		background: black;
+	}
+}
+.createBT
+{
+	animation: addBt 3s ease 0s 1;
+	background: #1dd933;
+	box-shadow: 0 0 18px white inset, 0 0 5px green;
+}
+.createBT:hover
+{
+	cursor: pointer;
+	box-shadow: 0 0 18px white inset, 0 0 5px white;
+}
+.createBT div
+{
+	margin-left: 20px;
+	width: 7px;
+	height: 50px;
+	border: 0;
+	background: black;
+	box-shadow: 0 0 20px black, 0 0 2px green inset;
+	transition: all .5s linear 0s;
+	border-radius: 10px;
+	transform-origine: 50% 50%;
+}
+.createBT:hover div
+{
+	background: green;
+	box-shadow: 0 0 40px black, 0 0 5px white inset;
+}
+.createBT:active
+{
+	transition: all 0.2s linear 0;
+	transform: rotate(360deg);
+}
+.createBT .crossL
+{
+	position: absolute;
+	animation: createCrossL 3s linear 0s 1;
+	transform:rotate(0deg);
+}
+.createBT .crossR
+{
+	animation: createCrossR 3s linear 0s 1;
+	transform:rotate(90deg);
+}
+@keyframes addBt
+{
+	0%
+	{
+		background: green;
+		box-shadow: 0 0 0px white inset, 0 0 0px green;
+	}
+	50%
+	{
+		box-shadow: 0 0 9px white inset, 0 0 3px green;
+	}
+	100%
+	{
+		background: #1dd933;
+		box-shadow: 0 0 18px white inset, 0 0 5px green;
+	}
+}
+@keyframes createCrossL
+{
+	0%
+	{
+		transform:rotate(0deg);
+	}
+	50%
+	{
+		transform:rotate(-45deg);
+	}
+	100%
+	{
+		transform:rotate(0deg);
+	}
+}
+@keyframes createCrossR
+{
+	0%
+	{
+		transform:rotate(0deg);
+	}
+	50%
+	{
+		transform:rotate(45deg);
+	}
+	100%
+	{
+		transform:rotate(90deg);
+	}
+}

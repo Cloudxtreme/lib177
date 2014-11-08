@@ -1,0 +1,38 @@
+
+.fragHt{
+display: inline-block;
+}
+.fragHt input{
+cursor: pointer;
+padding: 5px;
+border-radius: 5px;
+background: white;
+box-shadow: 0 0 10px black, 0 0 10px black inset;
+border: 0;
+}
+#compacteur{
+cursor: pointer;
+display: block;
+margin: 0 auto 0 auto;
+width: 200px;
+height: 30px;
+border: 0;
+color: white;
+padding: 5px;
+border-radius: 5px;
+background: black !important;
+box-shadow: 0 0 20px black;
+transition: all .3s linear 0s;
+}
+#compacteur:hover{
+display: block;
+margin: 0 auto 0 auto;
+width: 200px;
+height: 30px;
+border: 0;
+color: black;
+padding: 5px;
+border-radius: 5px;
+background: white !important;
+box-shadow: 0 0 20px white;
+}

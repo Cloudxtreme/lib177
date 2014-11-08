@@ -1,0 +1,42 @@
+
+/* Admin - newPage */
+.newPage{
+min-height: 400px;
+padding: 20px 50px 50px 50px;
+}.dialNewPage{
+width: 30%;
+position: absolute;
+padding: 20px;
+min-height: 150px;
+margin: 20px 0 0 10%;
+background: #f3f3f3;
+display: block;
+border: 1px solid black;
+box-shadow: 0 0 20px black;
+box-sizing: border-box;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+border-radius: 10px;
+}.corp #formNewPage, .corp #formMsgError{
+width: 30%;
+color: black;
+padding: 20px 0;
+display: block;
+min-height: 300px;
+text-align:center;
+border-radius: 20px;
+background: #4c4c4c;
+margin: 20px 0 0 60%;
+box-sizing: border-box;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-shadow: 0 0 20px black;
+background: white;
+}.corp #formNewPage input, .corp #formNewPage select{
+display: block;
+margin: 0 auto 20px auto;
+}
+#NewPageName{
+margin-left: 10px;
+cursor: text;
+}

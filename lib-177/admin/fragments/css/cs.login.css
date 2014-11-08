@@ -1,0 +1,16 @@
+#formLoginExt{
+display: block;
+width: 100%;
+margin: 0;
+padding: 0;
+min-height: 200px;
+}
+#formLoginExt input{
+display: block;
+width: 90%;
+margin: 10px auto;
+padding: 10px;
+text-align: center;
+border-radius: 5px;
+box-shadow: -2px -1px 4px black inset, 0 0 5px white;
+}

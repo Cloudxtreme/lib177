@@ -1,0 +1,64 @@
+body{
+font-family: courier;
+padding: 0;
+margin: 0;
+color: black;
+min-height: 900px;
+background: linear-gradient(135deg, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+}
+*::selection {
+	background:green;
+	color:yellow;
+    text-shadow: 0 0 3px yellow;
+}
+
+*::-moz-selection {
+	background:green;
+	color:yellow;
+    text-shadow: 0 0 3px black;
+}
+
+*::-webkit-selection {
+	background:green;
+	color:yellow;
+    text-shadow: 0 0 3px black;
+}
+.ongletTitre{
+height: 30px;
+font-size: 21px;
+width: 97%;
+color: white;
+text-shadow: 0 0 10px white;
+border-radius: 20px 20px 5px 5px;
+margin: 60px auto 0 auto;
+padding: 5px 0;
+box-shadow: 0 0 10px black;
+text-align: center;
+background: #7d7e7d;
+background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%);
+}
+.corp{
+min-height: 500px;
+margin: 0 auto 20px auto !important;
+border-radius: 5px 5px 20px 20px;
+box-shadow: 0 0 20px black;
+background: linear-gradient(to right,  rgba(0,110,46,1) 0%,rgba(0,110,46,0.56) 100%);
+padding: 1%;
+width: 94%;
+}
+.pointer{
+cursor: pointer;
+}
+img, table, td, textarea, input{
+max-width: 100%;
+box-sizing: border-box;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+}
+a{
+color: black;
+transition: .4 linear 0s;
+}
+a:hover{
+color: white;
+}

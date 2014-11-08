@@ -1,0 +1,40 @@
+.polygone{
+display: inline-block;
+}
+.polygone:hover span:nth-child(2), .polygone:hover .imgContener{
+background: rgba(21, 35, 45, .7);
+}
+.polygone:hover .polyTop{
+border-bottom: 46px solid rgba(21, 35, 45, .7);
+}
+.polygone:hover .polyBot{
+border-top: 46px solid rgba(21, 35, 45, .7);
+}
+.polyTop{
+display: block;
+width: 0;
+height: 0;
+transition: all .3s linear 0s;
+border-left: 78px solid transparent;
+border-right: 78px solid transparent;
+border-bottom: 46px solid #15232d;
+}
+.polygone span:nth-child(2), .imgContener{
+height: 80px;
+display: inline-block;
+width: 150px;
+background: #15232d;
+text-align: center;
+transition: all .3s linear 0s;
+box-shadow: 0 0 5px black inset, 0 0 5px black;
+}
+.polyBot{
+display: block;
+width: 0;
+height: 0;
+margin-top: -10px;
+transition: all .3s linear 0s;
+border-left: 78px solid transparent;
+border-right: 78px solid transparent;
+border-top: 46px solid #15232d;
+}

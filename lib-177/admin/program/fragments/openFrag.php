@@ -1,0 +1,1 @@
+<?phpfunction openFrag($src, $project, $stock, $cible){    if(!file_exists($src)){        echo 'Dossier "'.$src.'" introuvable.';        die;    }    Program::getProgram('core177', 'open.php');    openFile($src.'/'.$cible);        header('Location: fragments-seeFrags-'.$project.'-'.$stock.'-none');    die;}?>

@@ -1,0 +1,1 @@
+<?phpfunction createFrag($src, $project, $stock, $name){    Program::getProgram('core177', 'create.php');    create($src, $name);    Program::getProgram('core177', 'open.php');    openFile($src.'/'.$name);    header('Location: fragments-seeFrags-'.$project.'-'.$stock.'-0');    die;} ?>

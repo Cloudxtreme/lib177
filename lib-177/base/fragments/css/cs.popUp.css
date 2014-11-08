@@ -1,0 +1,84 @@
+noscript a{
+color: yellow !important;
+}
+noscript{
+top: 20px;
+color: red;
+width: 90%;
+z-index: 99;
+height: 90%;
+padding: 1%;
+display: block;
+position: absolute;
+margin: 10px 0 0 4%;
+text-align: center;
+border: 2px solid silver;
+border-radius: 10px;
+box-shadow: 0 0 100px 100px black;
+background: black;
+opacity: 0.97;
+}
+.window{
+box-sizing: border-box;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+top: 0px;
+width: 99% !important;
+z-index: 99;
+height: 90%;
+padding: 1%;
+display: block;
+position: absolute;
+margin: 0;
+text-align: center;
+box-shadow: 0 0 100px 100px black;
+background: black;
+opacity: 0.97;
+}
+#popup{
+position: absolute;
+color: white;
+top: 100px;
+width: 40%;
+z-index: 98;
+min-height: 200px;
+padding: 0 0 1% 1%;
+font-size: 18px;
+display: block;
+margin: 10px auto 0 30%;
+text-align: center;
+border: 2px solid silver;
+border-radius: 10px;
+box-shadow: 0 5px 20px white, 0 5px 50px white inset;
+background: green;
+opacity: 0.97;
+}
+#popup .close{
+margin: 5px 5px 0 0;
+cursor: pointer;
+display: inline-block;
+width: 35px;
+height: 35px;
+border-radius: 20px;
+transition: all 0.2s linear 0;
+box-shadow: 0 0 5px black,  0 0 0px white inset;
+}
+#popup .close:hover{
+box-shadow: 0 0 20px white,  0 0 20px red inset;
+}
+#popup .right{
+margin: 0;
+}
+#popup .minus{
+text-align: center;
+font-size: 13px;
+}
+#popup .minus span{
+cursor: pointer;
+text-decoration: none;
+color: white;
+}
+#popup .minus span:hover{
+text-decoration: underline;
+color: black;
+}

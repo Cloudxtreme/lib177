@@ -1,0 +1,83 @@
+
+/* Chronos */
+#chronos{
+color: white;
+width: 90px;
+padding: 10px 10px 20px 10px;
+margin: 30px auto 0 auto;
+border-radius: 20px;
+transition: all .4s linear 0s;
+}
+#chronos #chronosT{
+padding: 6px;
+border-radius: 10px;
+}
+#chronosS{
+opacity: 0.5;
+padding: 0 5px 5px 0;
+height: 25px;
+width: 10px;
+position: absolute;
+margin: 25px 0 0 80px;
+font-size: 18px;
+text-align: right;
+border-radius: 10px;
+transition: all .4s linear 0s;
+}
+#chronosResize{
+cursor: pointer;
+width: 10px;
+height: 10px;
+border: 1px solid red;
+position: absolute;
+margin: 0 0 0 85px;
+box-shadow: 0 0 5px red inset;
+transition: all .4s linear 0s;
+}
+#chronos #chronosResize span{
+display: block;
+width: 6px;
+height: 6px;
+border: 1px solid red;
+margin: 6px 0 0 -4px;
+}
+#chronos:hover #chronosS, #chronos:hover #chronosResize{
+opacity: 0.9;
+}
+#chronos #chronosResize:hover, #chronos #chronosResize span:hover{
+background: red;
+}
+#horloge{
+width: 400px;
+height: 140px;
+margin: 30px auto 0 auto;
+text-shadow: 1px 1px 5px white;
+}
+body #chronos .chronosBigS{
+position: relative;
+font-size: 22px;
+opacity: 1;
+margin: 0 0 0 20px;
+padding: 0;
+}
+body .window #chronosT{
+display: block;
+font-size: 110px;
+margin-left: 10px;
+line-height: 110px;
+}
+body .window #chronosS{
+opacity: 1;
+height: 30px;
+font-size: 30px;
+display: block;
+line-height: 20px;
+position: absolute;
+margin: 120px 0 0 370px;
+}
+body .window #chronosResize{
+opacity: 1;
+display: block;
+position: absolute;
+margin: 30px 0 0 370px;
+}

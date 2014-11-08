@@ -1,0 +1,25 @@
+
+/* Entropyx */
+#entropyxBox h2{
+text-align: center;
+}
+.startEntropyx{
+text-align: center;
+display: inline-block;
+padding-left: 48%;
+}
+.startEntropyx button{
+border: 0;
+color: white;
+padding: 10px;
+cursor: pointer;
+font-size: 21px;
+background: black;
+border-radius: 10px;
+transition: all .4s linear 0s;
+box-shadow: 0 0 10px black, 0 0 5px white inset;
+}
+.startEntropyx button:hover{
+color: white;
+box-shadow: 0 0 20px red, 0 0 10px red inset;
+}

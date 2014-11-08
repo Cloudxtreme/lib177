@@ -1,0 +1,57 @@
+.slide{
+height: 40px;
+width: 100%;
+text-align: center;
+margin: -10px 0 10px 0;
+border-radius: 0 0 25px 25px;
+box-shadow: 0 0 20px black inset;
+}
+.slide form{
+display: inline-block;
+}
+.slide input, .slide a{
+box-sizing: border-box;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+height: 40px;
+cursor: pointer;
+display: inline-block;
+margin: 0;
+color: white;
+border: 0;
+background: black;
+opacity: 0.7;
+border-radius: 0;
+padding: 5px 10px;
+transition: all .3s linear 0s;
+box-shadow: 0 0 0 black inset, -3px 0 0 black;
+}
+.slide input:hover, .slide a:hover, .slide .slideBTactive{
+color: green;
+opacity: 1;
+background: white;
+box-shadow: 0 -3px 0px black inset, 0 0 5px white;
+}
+.bt2cube{
+display: inline-block;
+cursor: pointer;
+width: 10px;
+height: 10px;
+border: 1px solid black;
+box-shadow: 0 0 5px black inset, 0 0 0 white;
+transition: all .4s linear 0s;
+}
+.bt2cube span{
+display: inline-block;
+width: 6px;
+height: 6px;
+border: 1px solid black;
+margin: 6px 0 0 -4px;
+}.bt2cube:hover{
+opacity: 0.9;
+box-shadow: 0 0 0 white inset, 0 0 5px black;
+}
+.bt2cube:hover, .bt2cube span:hover{
+border-color: white;
+background: white;
+}

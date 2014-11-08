@@ -1,0 +1,50 @@
+
+/* user_account_box */
+#user_account_box{
+position: absolute;
+top: 10px;
+left: 10px;
+}
+#user_account_box a{
+padding: 5px;
+background: white;
+border-bottom: 3px solid white;
+transition: all .5s linear 0s;
+}
+#user_account_box a:hover{
+color: green;
+border-bottom: 3px solid green;
+}
+/* Package Inscription */
+#formInscription input{
+border-radius: 5px;
+width: 30%;
+display: inline-block;
+margin: 10px 0 0 14%;
+}
+#formInscription input[type="radio"]{
+cursor: pointer;
+width: 10px;
+margin: 10px 20px 0 5px;
+}
+#formInscription label{
+cursor: pointer;
+}
+#formInscription fieldset{
+border: 1px dotted blue;
+border-radius: 10px;
+text-align: center;
+margin: 10px auto;
+width: 80%;
+}
+#formInscription #inscSub{
+padding: 5px;
+display: block;
+width: auto;
+margin: 20px auto;
+}
+#formInscription #mr, #formInscription #mme{
+margin-left: 30px;
+width: auto;
+margin-right: 5px
+}

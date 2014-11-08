@@ -1,0 +1,27 @@
+
+/* ConfigStyle */
+.formConfigStyle{
+width: 100%;
+padding: 50px;
+background: linear-gradient(45deg,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);
+}
+.configStyle{
+top: 15px;
+right: 30px;
+width: 50px;
+height: 100px;
+display: block;
+cursor: move;
+background: green;
+position: absolute !important;
+border-radius: 10px;
+box-shadow: 0 0 10px black, 0 0 10px black inset;
+transition: background, width, height .3s linear 0s, width .2s linear 0;
+}
+.configStyle:hover{
+background: blue;
+}.help{
+border : 1px solid #1877D5;
+background : blue;
+opacity : 0.3;
+}

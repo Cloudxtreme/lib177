@@ -1,0 +1,1 @@
+Type input inscription invalid

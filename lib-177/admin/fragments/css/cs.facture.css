@@ -1,0 +1,29 @@
+#facture{
+background: white;
+}
+#facture table{
+width: 95%;
+margin: 20px auto 10px auto;
+}
+#facture table tr td{
+padding: 5px;
+min-height: 20px;
+min-width: 25%;
+}
+#facture .produit td{
+background: rgba(0,204,252,0.2);
+}
+#facture .produit td input{
+width: 100%;
+border: 0;
+box-shadow: 0;
+text-align: center;
+background: transparent;
+}
+#facture table thead:first-of-type th{
+background: silver;
+border: 1px solid white;
+}
+#facture table tfoot td{
+font-weight: bold;
+}

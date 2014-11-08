@@ -1,0 +1,15 @@
+
+/* Package Perform */
+.present_diagnostique table{
+width: 80%;
+overflow: hidden;
+text-align: center;
+margin: 10px auto 10px auto;
+background: silver;
+border-radius: 50px;
+box-shadow: 0 0 30px black;
+}
+.present_diagnostique table td{
+height: 25px;
+border-bottom: 1px solid white;
+}

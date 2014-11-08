@@ -1,0 +1,1 @@
+<?php function switcher($project){    return $src = '../'.Secur::aZ09($project).'/index';}?>

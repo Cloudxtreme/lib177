@@ -1,0 +1,109 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet href="skin.css" type="text/css"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800">
+
+	<rect x="100" y="50" width="400" height="400" ry="400" rx="400" />
+	<ellipse x="500"  y="500"  cx="125" cy="130" rx="190" ry="45" />
+	<circle y="1000" cx="300" cy="350" r="120" />
+	<line x1="20" y1="80" x2="130" y2="200" />
+	<polyline points="50,50 200,100 20,200 200,40 300,50 400,60" />
+	<path d="M200,200 c200,100 -200,300 200,300" />
+	<path d="M100,100 c150,-50 100,200 200,200 s0,-100 100,-200" />
+	<path d="M200,450 a25,100 -30 0,1 50,-25 " />
+	
+	<path d="M104,42 Q49,92 23,170 Q77,85 161,77 C130,80 70,50 51,71 Q78,96 101,144 Q81,92 104,42 Z" style="fill:black;fill-opacity:0.5;fill-rule:nonzero;stroke:#A71212;stroke-width:5;stroke-linejoin:round;" />
+
+	<defs>
+		<marker id="Triangle" refX="0" refY="0.71" markerUnits="strokeWidth" markerWidth="1.43" markerHeight="1.43" orient="auto">
+		<path d="M0,0 l1.43,0.71 l-1.43,0.71 z" style="fill:red;fill-opacity:0.5;"/>
+		</marker>
+	</defs>
+	<line x1="40" y1="50" x2="640" y2="200" style="stroke:black;stroke-width:7;marker-end:url(#Triangle);" />
+	<line x1="40" y1="250" x2="640" y2="250" style="stroke:black;stroke-width:12;marker-end:url(#Triangle);" />
+
+	<linearGradient id="vertbleu" x1="0%" y1="100%" x2="100%" y2="0%">
+		<stop offset="0%" style="stop-color:#26CD22; stop-opacity:1"/>
+		<stop offset="100%" style="stop-color:#1F56D2;stop-opacity:1"/>
+	</linearGradient>
+	<rect x="20" y="10" width="800" height="300" style="fill:url(#vertbleu);" />
+	<radialGradient id="vertjaunebleu" r="50%" cx="20%" cy="20%" fy="50%" fx="50%" spreadMethod="reflect">
+		<stop offset="0%" style="stop-color:#26CD22;stop-opacity:1"/>
+		<stop offset="50%" style="stop-color:#FFFF00;stop-opacity:1"/>
+		<stop offset="100%" style="stop-color:#1F56D2;stop-opacity:1"/>
+	</radialGradient>
+	<radialGradient id="vertjaunebleu" r="50%" cx="20%" cy="20%" fy="50%" fx="50%" spreadMethod="repeat ">
+		<stop offset="0%" style="stop-color:#26CD22;stop-opacity:1"/>
+		<stop offset="50%" style="stop-color:#FFFF00;stop-opacity:1"/>
+		<stop offset="100%" style="stop-color:#1F56D2;stop-opacity:1"/>
+	</radialGradient>
+
+	<defs>
+		<pattern id="motifdellipse" patternUnits="userSpaceOnUse" x="0" y="0" width="50" height="50">
+			<ellipse style=" fill:red; stroke:black;" cx="25" cy="20" rx="20" ry="15" />
+		</pattern>
+	</defs>
+	<rect x="15" y="15" width="400" height="100" style="fill:url(#motifdellipse); stroke:#acdc66; fill-opacity:1; stroke-opacity:01" />
+
+	<ellipse cx="300" cy="300" rx="70" ry="30" style="fill: #26B90E; stroke: #9A0E9F;">
+	<set attributeName="visibility" attributeType="CSS" to="hidden" begin="triangle.click" />
+	<set attributeName="visibility" attributeType="CSS" to="visible" begin="triangle2.click" />
+	</ellipse>
+
+	<path id="triangle" d="M70,40 l-20,30 l40,0 z" style="fill: #F6FF00; stroke: #2B77D5;" />
+	<path id="triangle2" d="M120,40 l20,30 l20,-30 z" style="fill: #2B77D5; stroke: #F6FF00;" />
+	<path d="M50,50 q30,50 -10,110 q50,40 100,0 q-40,-60 -10,-110 q-40,-30 -80,0 z" style="fill:#00DA43; stroke:#28601D;">
+		<animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="0.5" begin="1s" dur="5s" fill="freeze" />
+	</path>
+	<path d="M150,150 q30,50 -10,110 q50,40 100,0 q-40,-60 -10,-110 q-40,-30 -80,0 z" style="fill:#00DA43; stroke:#28601D;">
+		<animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="-1440" begin="1s" dur="3s" fill="freeze" />
+	</path>
+	<path d="M50,50 q30,50 -10,110 q50,40 100,0 q-40,-60 -10,-110 q-40,-30 -80,0 z" style="fill:#00DA43; stroke:#28601D; ">
+		<animateTransform attributeName="transform" attributeType="XML" type="skewX" from="0" to="360" begin="1s" dur="3s" fill="freeze" />
+	</path>
+	<path d="M50,50 q30,50 -10,110 q50,40 100,0 q-40,-60 -10,-110 q-40,-30 -80,0 z" style="fill:#00DA43; fill-opacity:0.5; stroke:#28601D; ">
+		<animateTransform attributeName="transform" attributeType="XML" type="skewY" from="0" to="-360" begin="1s" dur="3s" fill="freeze" />
+	</path>
+	<polygon points="50,50 50,200 100,250 200,200 200,100 200,100 200,50" style="stroke: #0795A2; fill: #FFAE00;">
+		<animateColor attributeName="fill" attributeType="CSS" values="#FFAE00;#CE18D5;#FF3401;#3366FF" begin="0s" dur="3s" fill="freeze" />
+	</polygon>
+	<polygon points="50,50 50,200 100,250 200,200 200,100 200,100 200,50" style="stroke: #0795A2; fill: #FFAE00;">
+		<animateColor attributeName="fill" attributeType="CSS" values="#FFAE00; #CE18D5; #FF3401; #3366FF" keyTimes="0; 0.2; 0.6; 1" begin="0s" dur="10s" fill="freeze" />
+	</polygon>
+	<path d="M50,50 q30,50 -10,110 q50,40 100,0 q-40,-60 -10,-110 q-40,-30 -80,0 z" style="fill:#00DA43; stroke:#28601D;">
+		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0,0" to="320,240" begin="1s" dur="5s" fill="freeze" />
+	</path>
+	<defs></defs>
+
+	<rect id="rectangleQuiBouge" x="60" y="30" width="30" height="20" style="fill: #0B24BE; stroke: #18C20B;">
+		<animate id="bougageDuRectangle" attributeName="x" attributeType="XML" from="60" to="200" begin="2s"  dur="3s" fill="freeze" />
+	</rect>
+
+	<circle id="cercleQuiBouge" cx="50" cy="70" r="15" style="fill: #F70701; stroke: #FFA200;">
+		<animate attributeName="cy" attributeType="XML" from="70" to="170" begin="bougageDuRectangle.begin+2s" dur="3s" fill="freeze" />
+	</circle>
+	<defs></defs>
+
+	<rect id="rectangleQuiBouge" x="60" y="30" width="110" height="150" style="stroke: #0B24BE; fill: #18C20B;">
+		<animate attributeName="x" attributeType="XML" from="60" to="200" begin="accessKey(y)" dur="3s" fill="freeze" />
+	</rect>
+
+	<circle id="cercleQuiBouge" cx="50" cy="70" r="15" style="fill: #F70701; stroke: #FFA200;">
+		<animate attributeName="cy" attributeType="XML" from="70" to="170" begin="rectangleQuiBouge.mouseover" dur="3s" fill="freeze" restart="whenNotActive" />
+	</circle>
+	<path d="M200`200 c150`-50 100`200 200`200 s0`-100 100`-200" fill="none" stroke="black" /> 
+
+	<path id="triangleQuiBouge" d="M200,200 l50,50 l25,-49 z" style="fill:#A23333; stroke: #2439AB;">
+		<animateMotion begin="0s" dur="5s" path="m0,0 c150,-50 100,200 200,200 s0,-100 100,-200" fill="freeze "/>
+	</path>
+	<path d="M200`200 c150`-50 100`200 200`200 s0`-100 100`-200" fill="none" stroke="black" /> 
+
+	<path id="triangleQuiBouge" d="M200,200 l50,50 l25,-49 z" style="fill:#A23333; stroke: #2439AB;">
+		<animateMotion begin="0s" dur="5s" path="m0,0 c150,-50 100,200 200,200 s0,-100 100,-200" fill="freeze "/>
+	</path>
+	<text x="300" y="250" style="fill:yellow;stroke:#abcdef;font-size:50px;font-family:'Trebuchet MS', Verdana, serif;">Du texte en SVG !</text>
+	<text x="50" y="300" style="fill:yellow;stroke:#abcdef;font-size:90px;stroke-width:5;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:5,12;">Du texte en SVG !</text>
+	<text x="370" y="300" rotate="-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10,-10,10" style="stroke:red;fill-opacity:0.7;fill:#27D210;font-size:40px;stroke-width:1;letter-spacing:3px;text-anchor:middle;">
+		Un texte retourn&#233; de tous c&#244;t&#233;s !
+	</text>
+</svg>

@@ -1,0 +1,1 @@
+Le serveur a rencontré une erreur interne (erreur de script ou erreur passagère).

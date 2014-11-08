@@ -1,0 +1,274 @@
+.emptyDyr{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	position: absolute;
+	margin: 90px 0 0 35%;
+	background: white;
+	border: 1px solid silver;
+	box-shadow: 0 0 10px black;
+	border-radius: 10px;
+	padding: 10px;
+}
+#explorer{
+	margin: 10px 0 0 0;
+	min-height: 600px;
+}
+.menuExplorer{
+	color: white;
+	width: 70%;
+	text-align: left;
+	margin: 5px auto 10px auto;
+}
+.menuExplorer select{
+	position: absolute;
+	margin: 0 0 0 100px;
+}
+.menuExplorer #addPage img, .menuExplorer #addFolder img, .menuExplorer input[type=submit]{
+	cursor: pointer;
+}
+#addPage span, #addFolder span{
+	margin-left: -5px;
+	position: absolute;
+	transition: background .3s linear 0s;
+}
+.menuExplorer #addPage:hover, .menuExplorer #addFolder:hover{
+	background: white !important;
+}
+#explorer .files{
+	columns: 350px auto;
+	text-align: center;
+}
+#explorer .file{
+	height: 40px;
+	width: 330px;
+	margin: 5px 5px;
+	background: #262626;
+	padding: 1px 5px;
+	border-radius: 5px;
+	display: inline-block;
+	box-shadow: 0 0 10px black;
+}
+#explorer .fileMVC{
+	height: 40px;
+	width: 100%;
+	margin: 5px;
+}
+#explorer .largeBT{
+	text-align: left;
+	min-width: 230px !important;
+	transition: none !important;
+}
+#explorer .largeBT:hover{
+	z-index: 99 !important;
+}
+#explorer .mediumBT{
+	width: 200px !important;
+}
+#explorer .shortBT{
+	width: 40px !important;
+}
+#explorer .litleActBT, #explorer .shortBT, #explorer .mediumBT, #explorer .largeBT{
+	border: 0;
+	color: black;
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	background: #f3f3f3;
+	display: inline-block;
+	vertical-align: top;
+	transition: background .3s linear 0s;
+	box-shadow: -2px -1px 4px black inset, 0 0 0px white;
+}
+#explorer .litleActBT:hover, #explorer .shortBT:hover, #explorer .mediumBT:hover, #explorer .largeBT:hover,
+.bTmodeCase:hover, #explorer .bTmodeLine .link:hover, #explorer .active{
+	color: white;
+	background-color: #3a88fe;
+}
+#explorer .whiteBT{
+	min-width: 100px;
+	margin: 0 0 0 40%;
+}
+#explorer .actionBT:first-of-type{
+	min-width: 150px !important;
+	margin: 0 0 0 40% !important;
+}
+.actionBT{
+	min-width: 200px;
+	text-align: left;
+	margin: 0 0 0 10px;
+}
+.files .bTmodeLine .litleActBT{
+	margin: 4px 0 0 0 !important;
+}
+#explorer .listOpt .abso{
+	margin: -24px 0 0 0;
+}
+body #explorer .listOpt a, body #explorer .listOpt span{
+	display: none;
+	position: relative;
+	margin-left: 20px;
+	z-index: 99 !important;
+}
+#explorer .listOpt a:first-of-type{
+	width: auto !important;
+}
+#explorer .listActive{
+	width: 50px !important;
+	z-index: 98 !important;
+}
+#explorer .listActive a, #explorer .listActive span{
+	display: inline-block !important;
+}
+#explorer #addPage, #explorer #addFolder{
+	padding: 5px 5px 0px 5px;
+	display: inline-block;
+	transition: background .3s linear 0s;
+}
+#explorer .litleActBT{
+	min-width: 20px;
+	width: 20px;
+	padding: 5px;
+	margin: 0;
+	text-align: left;
+}
+.delete:hover, .propage:hover{
+	z-index: 4;
+	box-shadow: 1px -1px 4px black inset, 0 0 0px white;
+}
+#explorer .bTmodeLine img{
+	height: 20px;
+}
+.litleActBT input, .litleActBT img, #explorer .bTmodeCase img, #explorer .largeBT img, #explorer .litleActBT img{
+	height: 15px;
+}
+.bTmodeLine{
+	vertical-align: top;
+}
+.bTmodeCase{
+	z-index: 1;
+	display: inline-block;
+	width: 120px;
+	height: 100px;
+	border-radius: 5px;
+	overflow: hidden;
+	text-align: left;
+	margin: 5px;
+	background: url(../img/folder.png) no-repeat;
+	background-color: rgba(255,255,255,1);
+	background-position: 5px 5px;
+	vertical-align: bottom;
+	transition: background 0.4s linear 0;
+	box-shadow: -2px -1px 4px black inset;
+}
+#explorer .bTmodeCase .btFold{
+	z-index: 2;
+	width: 100px;
+	height: 60px;
+	padding: 10px;
+	color: #3a88fe;
+	overflow: hidden;
+	position: absolute;
+	display: inline-block;
+	vertical-align: bottom;
+	border-radius: 5px 5px 5px 0;
+	background-position: 5px 5px;
+	box-shadow: -2px -1px 4px black inset;
+}
+body #explorer .bTmodeCase:hover{
+	box-shadow: -2px -1px 4px black inset;
+}
+#explorer .bTmodeLine .link{
+	z-index: 1 !important;
+	margin: -1px -5px;
+	height: 30px !important;
+	width: 335px;
+	padding: 10px 0 0 5px;
+	display: block;
+	overflow: hidden;
+	border-radius: 5px;
+	text-align: left;
+	position: absolute;
+	vertical-align: bottom;
+	background: white;
+	box-shadow: -2px -1px 4px black inset;
+	transition: background 0.4s linear 0;
+}
+.bTmodeLine *{
+	z-index: 2;
+	position: relative;
+}
+#explorer .bTmodeLine input{
+	border: 0;
+	z-index: 4;
+	width: 120px;
+	height: 40px;
+	color: white;
+	background: #262626;
+	padding: 0;
+	vertical-align: top;
+	display: inline-block;
+	margin: -1px 0 0 0;
+	font-family: Courier New;
+	box-shadow: -2px -1px 4px black inset;
+}
+#explorer .bTmodeCase .btFile{
+	vertical-align: top;
+	height: 20px;
+	margin-top: 10px;
+}
+#explorer .bTmodeCase a, #explorer .bTmodeCase form{
+	padding: 2px;
+	border: 0;
+	z-index: 3;
+	height: 17px;
+	width: 20px;
+	color: black;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	display: inline-block;
+	transition: background .3s linear 0s;
+}
+#explorer .bTmodeCase form input[type="image"]{
+	border: 0;
+	height: 15px;
+	background: none;
+	box-shadow: none;
+}
+#explorer .bTmodeCase .delete{
+	position: absolute;
+	margin: 0 0 75px 93px;
+}
+#explorer .bTmodeCase .propage{
+	position: absolute;
+	margin: 0 0 75px 70px;
+}
+#explorer .bTmodeCase .see{
+	position: absolute;
+	margin: 0 0 75px 47px;
+}
+#explorer .bTmodeCase input{
+	display: block;
+	width: 120px;
+	height: 20px;
+	font-family: Courier New;
+	color: white;
+	background: #262626;
+	border: 0;
+	padding-left: 5px;
+	margin-top: 5px;
+	box-shadow: -2px -1px 4px black inset;
+}
+#explorer .bTmodeCase span{
+	display: block;
+	position: relative;
+	margin: 2px 10px 0 0;
+	text-align: right;
+	font-size: 15px;
+	vertical-align: bottom;
+	font-family: Courier New;
+}
+#explorer .bTmodeCase span:nth-of-type(1){
+	margin: 20px 10px 0 0;
+}

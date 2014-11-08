@@ -1,0 +1,1 @@
+cfg.inscription.php: Radio demandé sans label!

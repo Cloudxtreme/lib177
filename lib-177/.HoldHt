@@ -1,0 +1,134 @@
+RewriteEngine on
+
+#MAINTENANCE redirige tout sauf ip ci dessous
+#RewriteCond %{REMOTE_ADDR} !0.0.0.0
+#RewriteCond %{REMOTE_ADDR} !::1
+#RewriteRule .* maintenance.html [L]
+
+DirectoryIndex index.php error-403
+
+#refu lecture des fichier commencent par ".ht"
+<Files ".ht*">
+Deny from all
+</Files>
+
+#désactive le mode de compatibilité i.e.
+header set X-UA-Compatible "IE=Edge"
+<FilesMatch ".(js|css|gif|png|jpe?g|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico)$">
+ Header unset X-UA-Compatible
+</FilesMatch>
+
+Options All -Indexes
+AddDefaultCharset UTF-8
+
+# Project: admin
+#---------------------------------
+ErrorDocument 404 error-404
+ErrorDocument 401 error-401
+ErrorDocument 402 error-402
+ErrorDocument 403 error-403
+ErrorDocument 500 error-500
+
+RewriteRule ^admin/error-([0-9]+)$							admin/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^admin/maj-([a-z]+)$							admin/ctr.ctr.php?action177=maj&archive=$1 [L]
+RewriteRule ^admin/cfg-([a-zA-Z0-9_]+)-([a-zA-Z]+)$			admin/ctr.ctr.php?action177=cfg&src=$1&outil=$2 [L]
+RewriteRule ^admin/cfg-([a-zA-Z0-9_]+)$						admin/ctr.ctr.php?action177=cfg&src=$1 [L]
+
+RewriteRule ^admin/explore-([a-zA-Z0-9]+)-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_,-.]+)-([-a-zA-Z0-9_,/.]+)-([-a-zA-Z0-9_,/.]+)$		admin/ctr.ctr.php?action177=explore&exploAction=$1&exploProject=$2&destination=$3&cible=$4&distant=$5 [L]
+RewriteRule ^admin/explore-([a-zA-Z0-9]+)-([a-zA-Z0-9_-]+)-([a-zA-Z0-9_,-.]+)-([-a-zA-Z0-9_/.]+)$		admin/ctr.ctr.php?action177=explore&exploAction=$1&exploProject=$2&destination=$3&cible=$4 [L]
+RewriteRule ^admin/explore-see-([a-zA-Z0-9]+)-0$							admin/ctr.ctr.php?action177=explore&exploAction=see&exploProject=$1 [L]
+RewriteRule ^admin/explore-([a-zA-Z0-9]+)$									admin/ctr.ctr.php?action177=explore&exploProject=$1 [L]
+RewriteRule ^admin/explore$													admin/ctr.ctr.php?action177=explore&exploAction=see [L]
+
+RewriteRule ^admin/userAjax-([a-zA-Z0-9]+)-([a-zA-Z0-9]+)$					admin/ctr.ctr.php?action177=userAjax&action=$1&cible=$2 [L]
+RewriteRule ^admin/userAjax-([a-zA-Z0-9]+)$									admin/ctr.ctr.php?action177=userAjax&action=$1 [L]
+RewriteRule ^admin/ftpFavor-([a-zA-Z0-9_,-]+)-([-a-zA-Z0-9_/.]+)$			admin/ctr.ctr.php?action177=ftpFavor&actionFtpFav=$1&cible=$2 [L]
+RewriteRule ^admin/ftp-see-([a-zA-Z0-9_,-]+)-([-a-zA-Z0-9_/.]+)$			admin/ctr.ctr.php?action177=ftp&actionFtp=see&destination=$1&cible=$2 [L]
+RewriteRule ^admin/ftp-([a-zA-Z]+)-([a-zA-Z0-9_,-]+)-([-a-zA-Z0-9_/.]+)$	admin/ctr.ctr.php?action177=ftp&actionFtp=$1&destination=$2&cible=$3 [L]
+RewriteRule ^admin/fragment-([a-zA-Z0-9]+)$									admin/ctr.ctr.php?action177=fragments&action=$1
+RewriteRule ^admin/fragment$								    			admin/ctr.ctr.php?action177=fragments [L]
+RewriteRule ^admin/([a-zA-Z0-9_-]+)$										admin/ctr.ctr.php?action177=$1 [L]
+
+# Project: cocci
+#---------------------------------
+RewriteRule ^cocci/error-([0-9]+)$							cocci/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^cocci/accueil									cocci/ctr.ctr.php?action177=index [L]
+RewriteRule ^cocci/ajoutPanier-([0-9]+)						cocci/ctr.ctr.php?action177=ajoutPanier&id=$1 [L]
+RewriteRule ^cocci/supprPanier-([0-9]+)						cocci/ctr.ctr.php?action177=supprPanier&id=$1 [L]
+RewriteRule ^cocci/boutique-([0-9]+)						cocci/ctr.ctr.php?action177=boutique&rayon=$1 [L]
+RewriteRule ^cocci/detaille-bijoux-([0-9]+)-				cocci/ctr.ctr.php?action177=detaille&id=$1 [L]
+RewriteRule ^cocci/succes-([0-9]+)-([a-zA-Z0-9_@.-]+)		cocci/ctr.ctr.php?action177=succes&token=$1&email=$2 [L]
+RewriteRule ^cocci/([a-zA-Z0-9_]+)$							cocci/ctr.ctr.php?action177=$1 [L]
+
+# Project: cocciAdmin
+#---------------------------------
+RewriteRule ^cocciAdmin/error-([0-9]+)$					cocciAdmin/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^cocciAdmin/boutique-([0-9]+)				cocciAdmin/ctr.ctr.php?action177=boutique&rayon=$1&idProd=0&moveProd=0 [L]
+RewriteRule ^cocciAdmin/modProduct-([0-9]+)$			cocciAdmin/ctr.ctr.php?action177=modProduct&prod=$1 [L]
+RewriteRule ^cocciAdmin/modRayon-([0-9]+)$				cocciAdmin/ctr.ctr.php?action177=modRayon&id=$1 [L]
+RewriteRule ^cocciAdmin/delProduct-([0-9]+)$			cocciAdmin/ctr.ctr.php?action177=delProduct&id=$1 [L]
+RewriteRule ^cocciAdmin/([a-zA-Z0-9_]+)$				cocciAdmin/ctr.ctr.php?action177=$1 [L]
+
+# Project: cougar
+#---------------------------------
+RewriteRule ^cougar/error-([0-9]+)$					cougar/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^cougar/Profil-de-([a-zA-Z0-9]+)$		cougar/ctr.ctr.php?action177=user&pseudo=$1 [L]
+RewriteRule ^cougar/([a-zA-Z0-9_-]+)$				cougar/ctr.ctr.php?action177=$1 [L]
+
+# Project: cube
+#---------------------------------
+RewriteRule ^cube/error-([0-9]+)$		cube/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^cube/send$					cube/ctr.ctr.php?action177=index&send=1 [L]
+RewriteRule ^cube/([a-zA-Z0-9]+)$		cube/ctr.ctr.php?action177=$1 [L]
+
+# Project: framework
+#---------------------------------
+RewriteRule ^framework/error-([0-9]+)$		framework/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^framework/([a-zA-Z0-9]+)$		framework/ctr.ctr.php?action177=$1 [L]
+
+# Project: kael
+#---------------------------------
+RewriteRule ^kael/error-([0-9]+)$					kael/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^kael/article-([0-9]+)$					kael/ctr.ctr.php?action177=article&id=$1 [L]
+RewriteRule ^kael/comment-([0-9]+)$					kael/ctr.ctr.php?action177=comment&id=$1 [L]
+RewriteRule ^kael/categorie-([0-9]+)-				kael/ctr.ctr.php?action177=categorie&categorie=$1 [L]
+RewriteRule ^kael/repondre-([0-9]+)-([0-9]+)$		kael/ctr.ctr.php?action177=repondre&id=$1&com_id=$2 [L]
+RewriteRule ^kael/([a-zA-Z0-9]+)$           		kael/ctr.ctr.php?action177=$1 [L]
+
+# Project: kaelAdmin
+#---------------------------------
+RewriteRule ^kaelAdmin/error-([0-9]+)$				kaelAdmin/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^kaelAdmin/delUseur-([0-9]+)$			kaelAdmin/ctr.ctr.php?action177=delUseur&id=$1 [L]
+RewriteRule ^kaelAdmin/modArticle-([0-9]+)$			kaelAdmin/ctr.ctr.php?action177=modArticle&id=$1 [L]
+RewriteRule ^kaelAdmin/delArticle-([0-9]+)$			kaelAdmin/ctr.ctr.php?action177=delArticle&id=$1 [L]
+RewriteRule ^kaelAdmin/categorie-([0-9]+)-						kaelAdmin/ctr.ctr.php?action177=categorie&categorie=$1 [L]
+RewriteRule ^kaelAdmin/modifPage-([a-zA-Z]+)$					kaelAdmin/ctr.ctr.php?action177=modifPage&page=$1 [L]
+RewriteRule ^kaelAdmin/modifWork-([0-9]+)$						kaelAdmin/ctr.ctr.php?action177=modifWork&page=$1 [L]
+RewriteRule ^kaelAdmin/comment-refused-([0-9]+)$				kaelAdmin/ctr.ctr.php?action177=comment&statu=2&id=$1 [L]
+RewriteRule ^kaelAdmin/delImg-([-a-zA-Z0-9._\ ]+)$				kaelAdmin/ctr.ctr.php?action177=images&delete=$1 [L]
+RewriteRule ^kaelAdmin/repondre-([0-9]+)-([0-9]+)$				kaelAdmin/ctr.ctr.php?action177=repondre&id=$1&com_id=$2 [L]
+RewriteRule ^kaelAdmin/comment-accepted-([0-9]+)-([0-9]+)$		kaelAdmin/ctr.ctr.php?action177=comment&statu=1&id=$1&article=$2 [L]
+RewriteRule ^kaelAdmin/([a-zA-Z0-9]+)$							kaelAdmin/ctr.ctr.php?action177=$1 [L]
+
+# Project: labo
+#---------------------------------
+RewriteRule ^labo/error-([0-9]+)$			labo/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^labo/([a-zA-Z0-9]+)$			labo/ctr.ctr.php?action177=$1 [L]
+
+# Project: lib177
+#---------------------------------
+RewriteRule ^lib177/error-([0-9]+)$						lib177/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^lib177/user-([a-zA-Z]+)$					lib177/ctr.ctr.php?action177=user&query=$1 [L]
+RewriteRule ^lib177/info-([a-zA-Z]+)-([a-zA-Z]+)$		lib177/ctr.ctr.php?action177=info&lib=$1&name=$2 [L]
+RewriteRule ^lib177/([a-zA-Z0-9]+)$						lib177/ctr.ctr.php?action177=$1 [L]
+
+# Project: mcn
+#---------------------------------
+RewriteRule ^mcn/galerie-([a-z]+)-([0-9]+)$			mcn/ctr.ctr.php?action177=galerie&cible=$1&page=$2 [L]
+RewriteRule ^mcn/([a-zA-Z0-9]+)$           			mcn/ctr.ctr.php?action177=$1 [L]
+
+# Project: ultime
+#---------------------------------
+RewriteRule ^ultime/error-([0-9]+)$				ultime/ctr.ctr.php?action177=error&error=$1 [L]
+RewriteRule ^ultime/(a-zA-Z)-([0-9]+)-			ultime/ctr.ctr.php?action177=$1&id=$2 [L]
+RewriteRule ^ultime/([a-zA-Z0-9_-]+)$			ultime/ctr.ctr.php?action177=$1 [L]

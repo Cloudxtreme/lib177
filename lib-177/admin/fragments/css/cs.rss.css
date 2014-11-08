@@ -1,0 +1,63 @@
+
+/* Rss */
+.rssHeader{
+color: black;
+padding: 5px 10px;
+background: white;
+display: inline-block;
+margin: 0 0 0 10px;
+border-radius: 5px;
+box-shadow: 0 0 5px blue;
+transition: all .3s linear 0s;
+}
+.rssHeader:hover{
+background: black;
+}
+.rssHeader:hover a{
+color: white;
+}
+.rssBody .rssRow{
+margin: 10px;
+padding: 5px;
+color: white;
+border-radius: 5px;
+box-shadow: 0 0 5px black;
+list-style-type: none;
+}
+.rssBody ul{
+padding: 0;
+list-style-type: none;
+}
+.rssRow h4, .rssBody li p{
+margin: 0;
+border-radius: 5px;
+}
+.rssRow h4{
+padding: 7px 0 7px 10px;
+box-shadow: 0 0 10px blue;
+background: white;
+}
+.rssRow h4 a{
+color: black !important;
+}
+.rssBody li div{
+position: absolute;
+width: 90%;
+font-size: 15px;
+text-align: right;
+}
+.rssMedia{
+position: relative !important;
+}
+.rssBody img{
+height: 100px;
+}
+.rssRow p{
+padding: 3px 10px;
+display: block;
+width: 70%;
+color: white;
+margin: 3px 0 10px 50px !important;
+box-shadow: 0 -3px 5px blue;
+background: linear-gradient(to right,  rgba(30,87,153,1) 0%,rgba(125,185,232,0.41) 100%);
+}

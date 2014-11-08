@@ -1,0 +1,1 @@
+<?phpnamespace Core177{	function deleteDir($src)	{		if(!file_exists($src))			return false;		$arbre = \ScanDossier::src($src);		if(empty($arbre))			return rmdir($src);		foreach($arbre['fichiers'] as $file)			unlink($src.'/'.$file);		while(!empty($arbre['dossiers']))			rmdir($src.'/'.array_pop($arbre['dossiers']));		return rmdir($src);	}}?>

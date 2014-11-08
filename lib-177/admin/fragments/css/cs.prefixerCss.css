@@ -1,0 +1,76 @@
+#prefixerCss button, .subAjax
+{
+	cursor: pointer;
+	height: 40px;
+	border: 0;
+	display: block;
+	margin: 0px auto;
+	border-radius: 12px;
+}.subAjax
+{
+	padding: 5px;
+	width: 70px;
+	height: 20px;
+	text-align: center;
+}
+#prefixerCss button, #prefixerCss textarea, #prefixerCss input, #prefixerCss #result, .subAjax
+{
+	box-shadow: -2px -1px 4px black inset;
+	background: white;
+	color: black;
+	transition: background 0.4s linear 0;
+}
+#prefixerCss button:hover, #prefixerCss input:hover, #prefixerCss #result,
+#prefixerCss .active, .subAjax:hover
+{
+	background: #262626;
+	color: white;
+}
+#prefixerCss #copy-button
+{
+	width: 38px;
+	height: 38px;
+	background: url(../img/copy2.png) center no-repeat white;
+}
+#prefixerCss .zeroclipboard-is-hover
+{
+	background-color: #262626 !important;
+}
+#prefixerCss h1 img
+{
+	height: 30px;
+}
+#prefixerCss textarea
+{
+	padding: 10px;
+	display: block;
+	height: 200px;
+	width: 50%;
+	border-radius: 25px;
+	margin: 10px auto;
+}
+#prefixerCss input
+{
+	display: block;
+	padding: 5px 10px;
+	margin: 0px auto;
+	border-radius: 5px;
+}
+#prefixerCss #result
+{
+	width: 70%;
+	padding: 10px;
+	margin: 0 auto;
+	min-height: 200px;
+	border-radius: 25px;
+}
+#prefixerCss #toggle
+{
+	z-index: 20;
+	background: #262626;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	border-radius: 5px;
+}

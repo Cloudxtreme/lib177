@@ -1,0 +1,3 @@
+<?php
+$etat = VirtualFlux::drip();
+?>

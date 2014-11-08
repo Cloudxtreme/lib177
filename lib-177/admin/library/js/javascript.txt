@@ -1,0 +1,100 @@
+alert(texte_à_afficher) // affiche une fenetre
+prompt(question)        // ouvre un champ de texte
+typeof variable         // retourne sous forme de chaine de charactère le type de variable
+isNaN(test)		// retourne true si test n'est pas un nombre
+parseInt(nombre, 10)	// convertie une chaine de charactère en nombre
++ '' +			// concétané deux chiffre en chaine de charactères
+===			// contenu et type égal à
+!==			// contenu ou type différent de
+confirm(message) 	// à mettre dans une condition, si l'utilisateur appui sur ok la condition est vérifié
+for (initialisation; condition; incrémentation) 
+function(argument)	// crée une fonction
+myArray.push('Ludovic') // Ajoute Ludovic à la fin du tableau
+myArray.unshift('Ludovic') Ajoute Ludovic au début du tableau
+shift() et pop() retirent respectivement le premier et le dernier élément du tableau
+phrase.split(' ')      // coupe la chaine "phrase" à chaque espace et la range dans un tableau
+join(' ')              // inverse de split
+myArray.length         // retourne le nombre de paramètre du tableau
+focus()                // donne le focus
+blur()                 // retire le focus
+select()               // donne le focus + selectionne le texte
+myString.toUpperCase() // retourne la chaine de charactère myString en majuscule
+myString.toLowerCase() // retourne la chaine de charactère myString en minuscule
+myString.charAt(i)     // retourne le charactère numéro i de la chaine myString
+charCodeAt()           // même chose que charAt mais retourne le code ascii du charactère visé
+String.fromCharCode(74, ...) // instancier une nouvelle chaîne de caractères sur base d'une chaîne ASCII
+trim()                 //sert à supprimer les espaces blancs avant et après une chaîne de caractères
+indexOf() retourne la position du premier caractère trouvé, et s'il n'y en a pas, la valeur -1 est retournée
+lastIndexOf()          // retourne la position de la dernière
+Math.floor(num)        // retourne l'arondie inférieur de num
+Math.ceil(num)         // retourne l'arondie supèrieur de num
+Math.round(num)        // retourne l'arondie de num
+Math.random()          // Retourne un nombre compris entre 0 et 1.
+max() et min() permettent respectivement de retrouver les valeurs maximum et minimum dans une liste de nombres
+nom_instance instanceof nom_de_l'instance // verifie si une variable est une instance d'un objet donner (typeof pour les objets primitif)
+getComputedStyle(element, null).propriété css// retourne la valeur de la propriété
+getElementById
+getElementsByTagName
+
+setTimeout(function() {
+
+  myFunction(param1, param2);
+
+}, 2000); (embriquer dans une fonction anonyme pour compatibilité avec vielles version d'internet explorer temps avant exécution en miliseconde (ici 2000))
+
+
+
+var familly = { frère: 'dudulle', oncle: 'ben', tante: 'gorgette' };
+for (var id in family) { // On stocke l'identifiant dans "id" pour parcourir l'objet "family".
+	
+    alert(family[id]);
+		
+}
+switch(variable){
+	case valeur: instruction; break;
+	default: instruction;
+}
+
+
+ajouter/supprimer un événement:
+[element.]addEventListener('déclancheur', function([e]){évenement}, false);
+[element.]removeEventListener(idem);
+
+e.target                  // retourne une reférence vers l'élément déclancheur de l'évenement
+
+preventDefault            // annule l'action par défault de l'élement (expl: redirection d'un lien)
+
+createEvent(module)       // créer un évènement fictif
+initEvent(initialisation) // l'initialisé
+[element.]dispatchEvent(nom de l'évènement ficitf) // appliquer un évènement fictif à un élément 
+
+module/initialisation
+Events 	        initEvent(déclancheur, bouillonement, annulable)                      // Module général. Il englobe tous les événements existants mais ne permet pas de gestion affinée pour les événements possédant des caractéristiques particulières.
+HTMLEvents 	initEvent(déclancheur, bouillonement, annulable)                      // Sous-module de Events, il est dédié aux modifications HTML. Nous y retrouvons les événements abort, blur, change, error, focus, load, reset, resize, scroll, select, submit, unload
+UIEvents 	initUIEvent(déclancheur, bouillonement, annulable, window, 1)   // Sous-module de Events, il est dédié à l'interface utilisateur. Il gère les événements DOMActivate, DOMFocusIn, DOMFocusOut et, par extension, les événements keypress, keyup et keydown.
+MouseEvents 	initMouseEvent(déclancheur, bouillonement, cancelable, window, 
+                     		1, screenX, screenY, clientX, clientY, 
+                     		ctrlKey, altKey, shiftKey, metaKey, 
+                     		button, relatedTarget)                                // Sous-module de UIEvents, il est dédié à la gestion de la souris. Il gère les événements click, mouseout, mouseover, mousemove, mousedown et mouseup. L'événement dblclick n'est pas supporté.
+
+
+
+
+Nom de l'événement	Action pour le déclencher
+
+click     	////	Cliquer (appuyer puis relâcher) sur l'élément
+dblclick  	////	Double-cliquer sur l'élément
+mouseover 	////	Faire entrer le curseur sur l'élément
+mouseout  	////	Faire sortir le curseur de l'élément
+mousedown 	////	Appuyer (sans relâcher) sur le bouton gauche de la souris sur l'élément
+mouseup 	////	Relâcher le bouton gauche de la souris sur l'élément
+mousemove 	////	Faire déplacer le curseur sur l'élément
+keydown 	////	Appuyer (sans relâcher) sur une touche clavier sur l'élément
+keyup 		////	Relâcher une touche clavier sur l'élément
+keypress 	////	Frapper (appuyer puis relâcher) sur une touche clavier sur l'élément
+focus 		////	"Cibler" l'élément
+blur 		////	Annuler le "ciblage" de l'élément
+change 		////	Changer la valeur d'un élément spécifique aux formulaires (input, checkbox, etc...)
+select 		////	Sélectionner le contenu d'un champ de texte (input, textarea, etc...)
+submit 		////	Envoyer le formulaire
+reset 		////	Réinitialiser le formulaire

@@ -1,0 +1,1 @@
+<?phpclass Bundle{    public static function getBundle($bundle, $action){        $src = 'bundle/'.$bundle;        if(!file_exists($src)){            echo 'Bundle '.$bundle.' introuvable';            die;        }                include_once $src.'/'.$action;    }}?>

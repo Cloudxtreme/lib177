@@ -1,0 +1,18 @@
+
+/* Admin - cfg */
+#btCfgEdit pre{
+cursor: pointer;
+padding: 5px;
+color: red;
+margin-left: 10px;
+background: black;
+border-radius: 5px;
+display: inline-block;
+transition: all .3s linear 0s;
+box-shadow: 0 0 20px black, 0 0 1px white inset;
+}
+#btCfgEdit pre:hover{
+color: black;
+background: red;
+box-shadow: 0 0 40px black, 0 0 5px white inset;
+}

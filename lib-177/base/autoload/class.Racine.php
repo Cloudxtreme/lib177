@@ -1,0 +1,1 @@
+<?phpclass Racine{	public static function get($js = false)	{		if($_SERVER['HTTP_HOST'] == Config::domaine() OR $_SERVER['HTTP_HOST'] == Config::distant())			$racine = $_SERVER['HTTP_HOST'];		else			$racine = 'localhost';		if($js)			echo 'racine = "'.$racine.'"';		return $racine;	}}?>

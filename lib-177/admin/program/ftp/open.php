@@ -1,0 +1,1 @@
+<?phpfunction openFile($ftp, $src, $stock, $cible){	$ftp->cd($src);    $ftp->dll($cible);    header('Location: ftp-see-'.$stock.'-0');    die;}?>
